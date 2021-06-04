@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Nanum+Gothic&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #224941 url('./img/bg.jpg') no-repeat center center/cover;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  background-image: url('./img/waterGreen.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #f3f8f2;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5em;
   min-height: 100vh;
   overflow: hidden;
@@ -18,7 +25,20 @@ body {
 }
 
 h1 {
+  text-align: center;
   margin: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px;
+  font-size: 0.9em;
+}
+
+p {
+  text-align: center;
+  margin: 20px;
+  font-size: 0.5em;
 }
 
 .container {
@@ -119,7 +139,7 @@ h1 {
 
 /* iPhone 5/SE */
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .container {
     width: 250px;
     height: 250px;
@@ -140,6 +160,9 @@ h1 {
   }
   body {
     font-size: 1.8em;
+  }
+  p {
+    margin-bottom: 50px;
   }
 }
 
@@ -171,17 +194,35 @@ h1 {
 
 /* Landscape */
 
-@media (max-height: 540px) {
+/* @media (max-height: 540px) {
   body {
     flex-direction: row;
   }
-}
+} */
 
-@media (max-height: 375px) {
+@media (max-height: 376px) {
   body {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+
+    align-items: right;
   }
+
+  h1,
+  h2,
+  p {
+    color: pink;
+    text-align: right;
+    margin: 0.5em;
+    align-self: auto;
+  }
+
   .container {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     width: 250px;
     height: 250px;
   }
@@ -196,10 +237,10 @@ h1 {
     height: 160px;
   }
   h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
   body {
-    font-size: 1.8em;
+    font-size: 0.8em;
   }
 }
 
